@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c2d);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff8;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #0ff4;
+}
+
+.reset-btn {
+  background: #f00;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 14px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px #0ff2;
+  backdrop-filter: blur(10px);
+}
+
+.task {
+  margin: 10px 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.btn {
+  margin-top: 12px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #0cc;
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot.filled {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 8px #0ff8;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 12px #0ff4;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.12);
+}
+
+.mentor {
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
+  padding: 10px;
+  background: #111;
+  border-left: 4px solid #0ff;
+  color: #aaa;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 0 8px rgba(0,255,255,0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.task-card:hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.01);
+}
+
+.task-card.done {
+  text-decoration: line-through;
+  color: #aaa;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.task-card input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0ff;
+}
+.next-btn   {
+      margin: 22px auto 0;
+    display: flex;
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 0.9;
+  z-index: 9999;
+  border-radius: 50%;
+  animation: confettiFall 3s ease-out forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
