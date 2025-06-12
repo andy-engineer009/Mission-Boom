@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: 'Mission Boom',
         short_name: 'Boom',
-        theme_color: '#000',
+        theme_color: '#fff',
         icons: [
             {
                 src: 'apple-icon-180.png',
