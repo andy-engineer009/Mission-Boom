@@ -178,24 +178,9 @@ input[type="checkbox"] {
     display: flex;
 }
 
-.confetti {
-  position: fixed;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  opacity: 0.9;
-  z-index: 9999;
-  border-radius: 50%;
-  animation: confettiFall 3s ease-out forwards;
-}
 
-@keyframes confettiFall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(720deg);
-    opacity: 0;
-  }
+
+.logo {
+  display: flex;
+  margin: 0px auto;
 }

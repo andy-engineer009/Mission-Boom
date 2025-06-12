@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
+import logo from './assets/logomain.png';
 
 const learnPlan = [
   // Day 1: Props
@@ -168,7 +169,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1> Mission Boom🚀</h1>
+      <img className='logo' src={logo} alt="Mission Boom Logo" width="120" height="80" />
       <div className="topbar">
         <div>📅 Day {day}/14</div>
         <div>🔥 Streak: {streak}</div>
@@ -190,7 +191,7 @@ const App = () => {
     </label>
   ))}
 </div>
-        <button className="btn next-btn" onClick={nextDay}>Next Day ➡️</button>
+        <button className="btn next-btn" onClick={nextDay}>Next Mission ➡️</button>
       </div>
 
       <div className="glass">
