@@ -169,7 +169,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <img className='logo' src={logo} alt="Mission Boom Logo" width="120" height="80" />
+      <img className='logo' src={logo} alt="Mission Boom Logo" width="120" height="100" />
       <div className="topbar">
         <div>📅 Day {day}/14</div>
         <div>🔥 Streak: {streak}</div>
@@ -191,7 +191,7 @@ const App = () => {
     </label>
   ))}
 </div>
-        <button className="btn next-btn" onClick={nextDay}>Next Mission ➡️</button>
+        <button className="btn next-btn" onClick={nextDay}>Next Mission </button>
       </div>
 
       <div className="glass">

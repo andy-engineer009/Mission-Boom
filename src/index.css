@@ -9,12 +9,12 @@ body {
 .app {
   max-width: 800px;
   margin: auto;
-  padding: 20px;
+  padding:0px 20px 20px;
 }
 
 h1 {
   text-align: center;
-  color: #0ff;
+  /* color: #0ff; */
   text-shadow: 0 0 8px #0ff8;
 }
 
@@ -23,7 +23,7 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 10px 0px 20px;
   background: rgba(255,255,255,0.05);
   padding: 16px 10px;
   border-radius: 12px;
@@ -65,7 +65,7 @@ input[type="checkbox"] {
 
 .btn {
   margin-top: 12px;
-  background: #0ff;
+  background: #e28543;
   color: #000;
   border: none;
   padding: 14px 24px;
@@ -79,7 +79,7 @@ input[type="checkbox"] {
 
 .btn:hover {
   transform: scale(1.05);
-  background: #0cc;
+  background: #e28543;
 }
 
 .progress {
@@ -100,9 +100,9 @@ input[type="checkbox"] {
 }
 
 .dot.filled {
-  background: #0ff;
+  background: #e28543;
   color: #000;
-  box-shadow: 0 0 8px #0ff8;
+  box-shadow:0 0 8px #e2854366;
 }
 
 .card-grid {
@@ -116,7 +116,7 @@ input[type="checkbox"] {
   background: rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 12px;
-  box-shadow: 0 0 12px #0ff4;
+  box-shadow: 0 0 12px #e285430a;
   text-align: center;
   transition: 0.3s;
 }
@@ -132,7 +132,7 @@ input[type="checkbox"] {
   margin-top: 40px;
   padding: 10px;
   background: #111;
-  border-left: 4px solid #0ff;
+  border-left: 4px solid #e28543;;
   color: #aaa;
 }
 
@@ -165,13 +165,13 @@ input[type="checkbox"] {
   text-decoration: line-through;
   color: #aaa;
   background: rgba(0, 255, 255, 0.1);
-  border-color: #04bac5;
+  border-color: #e28543;
 }
 
 .task-card input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #0ff;
+  accent-color: #e28543;
 }
 .next-btn   {
       margin: 22px auto 0;
