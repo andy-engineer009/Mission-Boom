@@ -177,7 +177,7 @@ const App = () => {
       </div>
 
       <div className="glass">
-        <h2>📘 Today's Missions</h2>
+        <h2 className='today-task-title'>📘 Today's Missions</h2>
 <div className="task-list">
   {tasks.map((task, i) => (
     <label key={i} className={`task-card ${task.done ? 'done' : ''}`}>
@@ -194,7 +194,7 @@ const App = () => {
       </div>
 
       <div className="glass">
-        <h2>🗺️ Progress Map</h2>
+        <h2 className='today-task-title'>🗺️ Progress Map</h2>
         <div className="progress">
           {[...Array(14)].map((_, i) => (
             <div key={i} className={`dot ${i < day ? 'filled' : ''}`}>{i + 1}</div>
@@ -203,7 +203,7 @@ const App = () => {
       </div>
 
       <div className="glass">
-        <h2>🃏 Power Cards</h2>
+        <h2 className='today-task-title'>🃏 Power Cards</h2>
         <button className="btn" onClick={() => setShowCards(!showCards)}>
           {showCards ? "Hide Cards" : "Show Cards"}
         </button>
