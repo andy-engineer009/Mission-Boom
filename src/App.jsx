@@ -2,103 +2,117 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import logo from './assets/logomain.png';
 
+
+const learnTitles = [
+  "React Setup + JSX Basics",
+  "State & Events",
+  "Conditional Rendering & Lists",
+  "Reusable Components + Styling",
+  "useEffect & Side Effects",
+  "Forms & Formik",
+  "Routing with React Router",
+  "Dynamic Routing & Params",
+  "Lifting State Up & Data Sharing",
+  "useContext for Global State",
+  "Custom Hooks",
+  "Redux Toolkit",
+  "Data Manipulation (map, filter, reduce)",
+  "Final Project + Optimization"
+];
+
 const learnPlan = [
-  // Day 1: Props
+    // Day 1
   [
-    "Understand props usage in React components",
-    "Use children props for composition",
-    "Implement props drilling across 2–3 levels"
+    "Install Vite and create React project",
+    "Understand JSX syntax and rules",
+    "Create functional components",
+    "Use props and children to pass data",
+    "Mini Task: Make a UserCard component using props"
   ],
-
-  // Day 2: useState
+  // Day 2
   [
-    "Use useState for UI toggling & inputs",
-    "Build a counter with increment/decrement",
-    "Manage multiple state variables"
+    "Learn useState hook",
+    "Handle button click events",
+    "Create controlled input fields",
+    "Mini Task: Counter app with reset"
   ],
-
-  // Day 3: useEffect
+  // Day 3
   [
-    "Understand useEffect lifecycle",
-    "Fetch data from API and render",
-    "Apply cleanup function to avoid memory leaks"
+    "Render elements conditionally with if/ternary/&&",
+    "Use .map() to render lists",
+    "Understand React key prop importance",
+    "Mini Task: Display a to-do list with delete feature"
   ],
-
-  // Day 4: Custom Hooks
+  // Day 4
   [
-    "Create custom useLocalStorage hook",
-    "Build useCounter hook with logic reuse",
-    "Use a custom form handler hook"
+    "Split UI into reusable components",
+    "Create reusable Button and Card",
+    "Apply custom CSS or CSS modules",
+    "Mini Task: Styled card and button layout"
   ],
-
-  // Day 5: useRef & DOM Access
+  // Day 5
   [
-    "Focus input field on mount using useRef",
-    "Track value without re-render",
-    "Trigger animations or styles via refs"
+    "Learn useEffect for lifecycle control",
+    "Run effects on mount, update, and unmount",
+    "Fetch data from JSONPlaceholder",
+    "Mini Task: Fetch and display users with loading state"
   ],
-
-  // Day 6: Forms with Formik
+  // Day 6
   [
-    "Set up Formik in a React form",
-    "Add basic validation and error display",
-    "Submit form data and show confirmation"
+    "Create forms with controlled inputs",
+    "Validate inputs manually",
+    "Install and use Formik + Yup",
+    "Mini Task: Signup form with validation"
   ],
-
-  // Day 7: Lists & Keys
+  // Day 7
   [
-    "Render dynamic list using map",
-    "Use key prop properly for performance",
-    "Delete and update list items"
+    "Install react-router-dom",
+    "Setup Routes and Links",
+    "Create multi-page layout (Home, About, Profile)",
+    "Mini Task: Navigation between routes"
   ],
-
-  // Day 8: Lifting State Up
+  // Day 8
   [
-    "Share state between sibling components",
-    "Lift state up and pass down handlers",
-    "Build a parent-child form flow"
+    "Use useParams and useNavigate",
+    "Create dynamic route for user/profile",
+    "Mini Task: Navigate from user list to individual user details"
   ],
-
-  // Day 9: Routing with React Router
+  // Day 9
   [
-    "Install and configure React Router v6",
-    "Create routes and nested routes",
-    "Use useNavigate and params"
+    "Pass data from child to parent",
+    "Lift shared state to common ancestor",
+    "Mini Task: Filter/search items from a list"
   ],
-
-  // Day 10: Reusable Components
+  // Day 10
   [
-    "Build reusable Card and Button components",
-    "Use props.children and props customization",
-    "Style components with custom CSS"
+    "Create context and provide it",
+    "Consume context across multiple components",
+    "Mini Task: Theme switcher using useContext"
   ],
-
-  // Day 11: Redux Basics
+  // Day 11
   [
-    "Setup Redux Toolkit store",
-    "Create slice with actions and reducer",
-    "Use useDispatch and useSelector"
+    "Understand when to extract custom logic",
+    "Create a useLocalStorage hook",
+    "Mini Task: Store to-do items in localStorage using custom hook"
   ],
-
-  // Day 12: Redux Async
+  // Day 12
   [
-    "Add async logic with createAsyncThunk",
-    "Fetch data and store in Redux state",
-    "Show loading and error states"
+    "Install @reduxjs/toolkit & react-redux",
+    "Setup store, slice, actions",
+    "Mini Task: Global counter using Redux"
   ],
-
-  // Day 13: Final Mini App
+  // Day 13
   [
-    "Build full Todo/Note app with Redux",
-    "Support add/edit/delete tasks",
-    "Persist state with localStorage"
+    "Use map, filter, reduce in JSX",
+    "Sort and search lists",
+    "Mini Task: Product filter with category & price"
   ],
-
-  // Day 14: Deploy & Polish
+  // Day 14
   [
-    "Polish UI, test edge cases",
-    "Deploy app to Netlify",
-    "Reflect on learnings and plan next steps"
+    "Clean and restructure folders",
+    "Apply code-splitting with lazy loading",
+    "Use memoization (useMemo, React.memo)",
+    "Final Task: Complete and polish mini project"
   ]
 ];
 
@@ -178,7 +192,9 @@ const App = () => {
       </div>
 
       <div className="glass">
-        <h2 className='today-task-title'>📘 Today's Missions</h2>
+      
+        <h2 className='today-task-title day-title'>Day {day}</h2>
+        <h2 className='today-task-title'>{learnTitles[day - 1]}</h2>
 <div className="task-list">
   {tasks.map((task, i) => (
     <label key={i} className={`task-card ${task.done ? 'done' : ''}`}>
@@ -191,7 +207,7 @@ const App = () => {
     </label>
   ))}
 </div>
-        <button className="btn next-btn" onClick={nextDay}>Next Mission </button>
+        <button className="btn next-btn" onClick={nextDay}>Next Day </button>
       </div>
 
       <div className="glass">
